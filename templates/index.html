@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dojo Survey</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename ='style.css') }}"
+    />
+  </head>
+  <body>
+    <div class="main">
+      <form class="form" action="/process" method="post">
+        <h1>Dojo Survey</h1>
+        <label for="name">Your Name:</label>
+        <input type="text" name="name" />
+        <label for="city">Your City:</label>
+        <select name="city">
+          <option>San Francisco</option>
+          <option>Los Angeles</option>
+          <option>Seattle</option>
+          <option>New York</option>
+        </select>
+        <label for="language">Favorite Language:</label>
+        <select name="language">
+          <option>Python</option>
+          <option>HTML</option>
+          <option>CSS</option>
+          <option>JavaScript</option>
+        </select>
+        <textarea name="comment" cols="30" rows="10"></textarea>
+        <button>Submit</button>
+      </form>
+    </div>
+
+    <!-- <div class="=main">
+      <h1>Dojo Survey</h1>
+      <form action="/users" method="post">
+        <label for="name">Your Name:</label>
+        <input type="text" name="name" />
+        <label for="city">Your City:</label>
+        <select name="city"></select>
+        <option>San Jose</option>
+        <option>Burbank</option>
+        <option>Seattle</option>
+      </form>
+    </div> -->
+  </body>
+</html>
